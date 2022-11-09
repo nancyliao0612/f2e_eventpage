@@ -1,0 +1,67 @@
+section {
+  height: 100vh;
+}
+
+.bother_container {
+  overflow: hidden;
+}
+
+.img_zoom_in {
+  position: relative;
+}
+
+.square_one {
+  position: absolute;
+  left: 19%;
+  top: 38.5%;
+  width: 255px;
+  opacity: 0;
+}
+
+.square_two {
+  position: absolute;
+  left: 51.8%;
+  top: 40%;
+  width: 205px;
+  opacity: 0;
+}
+
+.square_three {
+  position: absolute;
+  left: 40%;
+  top: 59.5%;
+  width: 170px;
+  opacity: 0;
+}
+
+.banner_one {
+  position: absolute;
+  left: 24.8%;
+  top: 26.5%;
+  width: 450px;
+  opacity: 0;
+}
+
+.banner_two {
+  position: absolute;
+  left: 52.3%;
+  top: 50.2%;
+  width: 450px;
+  opacity: 0;
+}
+
+.banner_three {
+  position: absolute;
+  left: 20.5%;
+  top: 64.5%;
+  width: 500px;
+  opacity: 0;
+}
+
+.title {
+  position: absolute;
+  width: 580px;
+  opacity: 0;
+  top: 120px;
+  left: -50%;
+}
