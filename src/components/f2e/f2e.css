@@ -1,0 +1,44 @@
+.f2e_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.web_design {
+  width: 1050px;
+}
+
+.logo {
+  width: 900px;
+}
+
+.scroll_down_square {
+  border: solid 1px white;
+  width: 145px;
+  height: 145px;
+  transform: rotateZ(45deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.scroll_down_square p {
+  font-weight: 300;
+  line-height: 50px;
+}
+
+.scroll_down_square a {
+  transform: rotateZ(-45deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+.scroll_down_square img {
+  width: 8px;
+}

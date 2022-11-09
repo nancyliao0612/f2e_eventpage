@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500&display=swap");
 
 * {
   margin: 0;
@@ -12,11 +12,11 @@
 
 /* css variables */
 :root {
-  --color-bg: white;
+  --color-bg: #fff;
   --color-bg-variant: black;
   --color-primary: black;
   --color-primary-variant: black;
-  --color-white: black;
+  --color-white: #fff;
   --color-light: black;
 
   --transition: all 400ms ease;
@@ -36,9 +36,17 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  background: var(--color-bg);
   color: var(--color-white);
   line-height: 1.7;
+}
+
+section {
+  background-image: url("./components/f2e/images/background.jpg");
+  height: 100vh;
+}
+
+a {
+  color: var(--color-white);
 }
 
 /* MEDIA QUERIES (MEDIUM DEVICES) */
