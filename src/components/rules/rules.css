@@ -1,0 +1,70 @@
+.rules_container {
+  overflow: hidden;
+}
+
+.title_img_container {
+  display: flex;
+  justify-content: center;
+  margin: 70px;
+}
+
+.blackBg_container {
+  display: flex;
+}
+
+.black_left {
+  width: 50vw;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  background-image: url("./images/black_left.png");
+  background-size: contain;
+}
+
+.black_right {
+  width: 50vw;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-image: url("./images/black_left.png");
+  background-size: cover;
+}
+
+.race_title {
+  width: 600px;
+}
+
+.frame_one,
+.frame_one_bg {
+  opacity: 0;
+  position: absolute;
+  top: 300px;
+  width: 400px;
+  left: 250px;
+}
+
+.frame_two,
+.frame_two_bg {
+  opacity: 0;
+  position: absolute;
+  width: 430px;
+  bottom: 120px;
+  right: 250px;
+}
+
+.evaluation_content {
+  position: absolute;
+  left: 310px;
+  top: 245px;
+  width: 300px;
+}
+
+.price_content {
+  position: absolute;
+  width: 315px;
+  bottom: 175px;
+  right: 290px;
+}

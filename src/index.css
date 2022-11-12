@@ -13,7 +13,7 @@
 /* css variables */
 :root {
   --color-bg: #fff;
-  --color-bg-variant: black;
+  --color-bg-black: black;
   --color-primary: black;
   --color-primary-variant: black;
   --color-white: #fff;
@@ -45,7 +45,7 @@ body {
   height: 100vh;
   position: fixed;
   top: 0;
-  z-index: -1;
+  z-index: -2;
   background-image: url("./assets/images/background.png");
   background-size: cover;
 }
@@ -75,7 +75,7 @@ a {
     width: var(--container-width-sm);
   }
 
-  section>h2 {
+  section > h2 {
     margin-top: 2rem;
   }
 }
