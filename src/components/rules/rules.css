@@ -68,3 +68,27 @@
   bottom: 175px;
   right: 290px;
 }
+
+/* 贊助單位 */
+
+.sponsor_title {
+  position: absolute;
+  top: 150px;
+}
+
+.sponsors_container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.sponsor_logos_container {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+}
+
+.sponsor_logos {
+  position: absolute;
+  top: 420px;
+}
