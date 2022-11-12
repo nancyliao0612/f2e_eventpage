@@ -40,8 +40,15 @@ body {
   line-height: 1.7;
 }
 
+.background_container {
+  background-image: url("./assets/images/background.png");
+  background-size: contain;
+  /* background-repeat: no-repeat; */
+  border: solid 1px white;
+  overflow: hidden;
+}
+
 section {
-  background-image: url("./components/f2e/images/background.jpg");
   height: 100vh;
 }
 

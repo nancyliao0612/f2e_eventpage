@@ -3,30 +3,32 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 5rem;
+  gap: 2rem;
 }
 
 .web_design {
-  width: 1050px;
+  width: 900px;
 }
 
 .logo {
-  width: 900px;
+  width: 700px;
 }
 
 .scroll_down_square {
   border: solid 1px white;
-  width: 145px;
-  height: 145px;
+  width: 110px;
+  height: 110px;
   transform: rotateZ(45deg);
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  margin-top: 50px;
 }
 
 .scroll_down_square p {
   font-weight: 300;
+  font-size: 12px;
   line-height: 50px;
 }
 
@@ -35,7 +37,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 10px;
   align-items: center;
 }
 

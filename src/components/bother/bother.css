@@ -1,9 +1,5 @@
-section {
-  height: 100vh;
-}
-
 .bother_container {
-  overflow: hidden;
+  /* border: solid 1px white; */
 }
 
 .img_zoom_in {
@@ -12,56 +8,97 @@ section {
 
 .square_one {
   position: absolute;
-  left: 19%;
-  top: 38.5%;
+  left: 16%;
+  top: -26%;
   width: 255px;
   opacity: 0;
 }
 
 .square_two {
   position: absolute;
-  left: 51.8%;
-  top: 40%;
+  left: 50%;
+  top: -24%;
   width: 205px;
   opacity: 0;
 }
 
 .square_three {
   position: absolute;
-  left: 40%;
-  top: 59.5%;
+  left: 38%;
+  top: -5%;
   width: 170px;
   opacity: 0;
 }
 
 .banner_one {
   position: absolute;
-  left: 24.8%;
-  top: 26.5%;
+  left: 22%;
+  top: -38%;
   width: 450px;
   opacity: 0;
 }
 
 .banner_two {
   position: absolute;
-  left: 52.3%;
-  top: 50.2%;
+  left: 50.5%;
+  top: -14%;
   width: 450px;
   opacity: 0;
 }
 
 .banner_three {
   position: absolute;
-  left: 20.5%;
-  top: 64.5%;
+  left: 18.5%;
+  top: 0%;
   width: 500px;
   opacity: 0;
 }
 
 .title {
   position: absolute;
-  width: 580px;
+  width: 500px;
   opacity: 0;
-  top: 120px;
+  top: -50%;
   left: -50%;
+}
+
+/* interactive design */
+
+.ui_engineer {
+  opacity: 0;
+  width: 900px;
+  position: absolute;
+  right: -70%;
+  top: -20%;
+}
+
+.designer {
+  opacity: 0;
+  width: 200px;
+  position: absolute;
+  left: 18%;
+  top: 5%;
+}
+
+.ui_board {
+  opacity: 0;
+  width: 450px;
+  position: absolute;
+  left: 30%;
+  top: 10%;
+}
+
+.engineer {
+  opacity: 0;
+  width: 200px;
+  position: absolute;
+  right: 20%;
+  top: 40%;
+}
+.engineer_board {
+  opacity: 0;
+  width: 800px;
+  position: absolute;
+  right: 25%;
+  top: 38%;
 }
