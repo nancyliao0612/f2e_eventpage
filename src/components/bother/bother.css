@@ -3,8 +3,10 @@
 }
 
 .title {
+  display: block;
   width: 500px;
   opacity: 0;
+  margin: auto;
 }
 
 /* interactive design */

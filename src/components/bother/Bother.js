@@ -32,16 +32,11 @@ const Bother = () => {
     });
 
     srollTL
-      .fromTo(
-        ".title",
-        {
-          opacity: 0,
-        },
-        {
-          opacity: 1,
-          xPercent: 50,
-        }
-      )
+      .fromTo(".title", {
+        opacity: 0,
+      }, {
+        opacity: 1,
+      })
       .fromTo("#square_one path", {
         strokeDashoffset: 1010,
       }, {
@@ -70,7 +65,7 @@ const Bother = () => {
 
   return (
     <section class="section2">
-      <img src={title} alt="title" className="title right" />
+      <img src={title} alt="title" className="title" />
 
       <A1 />
     </section>
