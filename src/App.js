@@ -7,13 +7,14 @@ import WebDesign from "./components/webDesign/WebDesign";
 function App() {
   const backgroundRef = useRef();
 
-  return (
+  return (<>
     <div ref={backgroundRef}>
-      <div className="background_container">
-        <F2E />
-        <Bother />
-      </div>
+      <F2E />
+      <Bother />
     </div>
+
+    <div className="background_container" />
+  </>
   );
 }
 

@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef, useEffect } from "react";
+import { useEffect } from "react";
 import "./bother.css";
 // gsap
 import { gsap } from "gsap";
@@ -16,96 +16,64 @@ import graphic_designer from "../bother/images/graphic_designer.svg";
 import ui_board from "../bother/images/ui_board.png";
 import engineer_board from "../bother/images/engineer_board.png";
 import engineer from "../bother/images/engineer.png";
+import A1 from "../../svg/A1.js";
 
 const Bother = () => {
-  const botherRef = useRef();
-  gsap.registerPlugin(ScrollTrigger);
 
-  // useLayoutEffect(() => {
-  //   let tl = gsap.timeline({
-  //     scrollTrigger: {
-  //       trigger: ".img_zoom_in",
-  //       start: "+=100px center",
-  //       // markers: true,
-  //       toggleActions: "restart none none pause",
-  //     },
-  //   });
-  //   tl.to(".img_zoom_in", {
-  //     // scale: 1.15,
-  //     backgroundPosition: "-200px 110%",
-  //     duration: 1.5,
-  //     ease: "ease-in-out",
-  //   })
-  //     .to(".title", {
-  //       xPercent: -50,
-  //       left: "50%",
-  //       opacity: 1,
-  //     })
-  //     .to(".square_one", {
-  //       opacity: 1,
-  //       delay: 1,
-  //     })
-  //     .to(".banner_one", {
-  //       opacity: 1,
-  //       duration: 1,
-  //     })
-  //     .to(".square_two", {
-  //       opacity: 1,
-  //       duration: 1,
-  //     })
-  //     .to(".banner_two", {
-  //       opacity: 1,
-  //       duration: 1,
-  //     })
-  //     .to(".square_three", {
-  //       opacity: 1,
-  //       duration: 1,
-  //     })
-  //     .to(".banner_three", {
-  //       opacity: 1,
-  //       duration: 1,
-  //     });
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const srollTL = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section2",
+        pin: true,
+        markers: true,
+        scrub: true,
+      },
+    });
 
-  //   return () => tl.scrollTrigger.kill();
-  // }, []);
+    srollTL
+      .fromTo(
+        ".title",
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          xPercent: 50,
+        }
+      )
+      .fromTo("#square_one path", {
+        strokeDashoffset: 1010,
+      }, {
+        strokeDashoffset: 0,
+      })
+      .fromTo("#bar_one path", {
+        strokeDashoffset: 1100,
+      }, {
+        strokeDashoffset: 0,
+      })
+      .fromTo("#bar_one line, #bar_one rect, #slash_one path", {
+        opacity: 0,
+      }, {
+        opacity: 1,
+      }, "<")
+      .fromTo("#bar_one text", {
+        opacity: 0,
+      }, {
+        opacity: 1,
+      });
+
+    return () => {
+      srollTL.kill();
+    };
+  }, []);
 
   return (
-    <div ref={botherRef} id="bother" className="bother_container">
-      <section className="img_zoom_in">
-        <img src={title} alt="title" className="title right" />
-        <img src={square_one} alt="square" className="square_one left" />
-        <img src={banner_one} alt="banner" className="banner_one left" />
-        <img src={square_two} alt="square" className="square_two right" />
-        <img src={banner_two} alt="banner" className="banner_two right" />
-        <img src={square_three} alt="square" className="square_three left" />
-        <img src={banner_three} alt="banner" className="banner_three left" />
-        <img
-          src={interactive_design}
-          alt="square"
-          className="ui_engineer left_disappear"
-        />
-        <img
-          src={graphic_designer}
-          alt="square"
-          className="designer up right_disappear"
-        />
-        <img
-          src={ui_board}
-          alt="square"
-          className="ui_board up right_disappear"
-        />
-        <img
-          src={engineer_board}
-          alt="square"
-          className="engineer_board engineer_up right_disappear"
-        />
-        <img
-          src={engineer}
-          alt="square"
-          className="engineer engineer_up right_disappear"
-        />
-      </section>
-    </div>
+    <section class="section2">
+      <img src={title} alt="title" className="title right" />
+
+      <A1 />
+    </section>
   );
 };
 
