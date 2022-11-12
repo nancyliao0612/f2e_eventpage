@@ -16,7 +16,7 @@ import graphic_designer from "../bother/images/graphic_designer.svg";
 import ui_board from "../bother/images/ui_board.png";
 import engineer_board from "../bother/images/engineer_board.png";
 import engineer from "../bother/images/engineer.png";
-import A1 from "../../svg/A1.js";
+import BotherItem from "../../svg/BotherItem.js";
 
 const Bother = () => {
 
@@ -26,7 +26,6 @@ const Bother = () => {
       scrollTrigger: {
         trigger: ".section2",
         pin: true,
-        markers: true,
         scrub: true,
       },
     });
@@ -34,29 +33,78 @@ const Bother = () => {
     srollTL
       .fromTo(".title", {
         opacity: 0,
+        x: -250,
       }, {
         opacity: 1,
+        x: 0,
       })
-      .fromTo("#square_one path", {
+
+      // BotherItem1
+      .fromTo("#BotherItem1 #square_one path", {
         strokeDashoffset: 1010,
       }, {
         strokeDashoffset: 0,
       })
-      .fromTo("#bar_one path", {
+      .fromTo("#BotherItem1 #bar_one path", {
         strokeDashoffset: 1100,
       }, {
         strokeDashoffset: 0,
       })
-      .fromTo("#bar_one line, #bar_one rect, #slash_one path", {
+      .fromTo("#BotherItem1 #bar_one line, #BotherItem1 #bar_one rect, #BotherItem1 #slash_one path", {
         opacity: 0,
       }, {
         opacity: 1,
       }, "<")
-      .fromTo("#bar_one text", {
+      .fromTo("#BotherItem1 #bar_one text", {
         opacity: 0,
       }, {
         opacity: 1,
-      });
+      })
+
+      // BotherItem2
+      .fromTo("#BotherItem2 #square_two path", {
+        strokeDashoffset: 1010,
+      }, {
+        strokeDashoffset: 0,
+      })
+      .fromTo("#BotherItem2 #bar_two path", {
+        strokeDashoffset: 1100,
+      }, {
+        strokeDashoffset: 0,
+      })
+      .fromTo("#BotherItem2 #bar_two rect, #BotherItem2 #bar_two .rect, #BotherItem2 #slash_two path, #BotherItem2 #slash_two line", {
+        opacity: 0,
+      }, {
+        opacity: 1,
+      }, "<")
+      .fromTo("#BotherItem2 #bar_two text", {
+        opacity: 0,
+      }, {
+        opacity: 1,
+      })
+
+      // BotherItem3
+      .fromTo("#BotherItem3 #square_three path", {
+        strokeDashoffset: 1010,
+      }, {
+        strokeDashoffset: 0,
+      })
+      .fromTo("#BotherItem3 #bar_three path", {
+        strokeDashoffset: 1221,
+      }, {
+        strokeDashoffset: 0,
+      })
+      .fromTo("#BotherItem3 #bar_three rect, #BotherItem3 #bar_three .rect, #BotherItem3 #bar_three line", {
+        opacity: 0,
+      }, {
+        opacity: 1,
+      }, "<")
+      .fromTo("#BotherItem3 #bar_three text", {
+        opacity: 0,
+      }, {
+        opacity: 1,
+      })
+      ;
 
     return () => {
       srollTL.kill();
@@ -67,7 +115,7 @@ const Bother = () => {
     <section class="section2">
       <img src={title} alt="title" className="title" />
 
-      <A1 />
+      <BotherItem />
     </section>
   );
 };

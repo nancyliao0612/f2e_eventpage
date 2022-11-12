@@ -1,0 +1,68 @@
+.rect {
+    stroke-dashoffset: 1100;
+    stroke-dasharray: 1100;
+    animation: rectDraw 2s linear infinite;
+    animation-fill-mode: forwards;
+}
+
+text {
+    font-family: 'Space Monkey';
+    font-weight: 700;
+    animation: textDraw 2s linear infinite;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rectDraw {
+
+    45% {
+        transform: translate(0, 0);
+    }
+
+    46% {
+        transform: translate(40px, -40px);
+    }
+
+    47% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes textDraw {
+    0% {
+        fill-opacity: 1;
+    }
+
+    51% {
+        fill-opacity: 1;
+    }
+
+    52% {
+        fill-opacity: 0;
+    }
+
+    53% {
+        fill-opacity: 1;
+    }
+
+    54% {
+        fill-opacity: 0;
+    }
+
+    55% {
+        fill-opacity: 1;
+        transform: translate(0, 0);
+    }
+
+    56% {
+        transform: translate(-40px, 40px);
+    }
+
+    57% {
+        transform: translate(0, 0);
+        fill-opacity: 1;
+    }
+
+    100% {
+        fill-opacity: 1;
+    }
+}
