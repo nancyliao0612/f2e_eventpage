@@ -1,0 +1,21 @@
+.section4 {
+  overflow: hidden;
+}
+
+.section4>.title {
+  display: block;
+  width: 1000px;
+  opacity: 0;
+  margin: 40px auto;
+}
+
+.section4>.ui-wrapper {
+  width: 100%;
+  height: 100%;
+  margin: 40px auto;
+  text-align: center;
+}
+
+#topic-svg-wrapper {
+  scale: 0.5;
+}
