@@ -2,51 +2,9 @@
   overflow: hidden;
 }
 
-.title {
+.section2>.title {
   display: block;
   width: 500px;
   opacity: 0;
   margin: 40px auto;
-}
-
-/* interactive design */
-
-.ui_engineer {
-  opacity: 0;
-  width: 900px;
-  position: absolute;
-  right: -70%;
-  top: -20%;
-}
-
-.designer {
-  opacity: 0;
-  width: 200px;
-  position: absolute;
-  left: 18%;
-  top: 5%;
-}
-
-.ui_board {
-  opacity: 0;
-  width: 450px;
-  position: absolute;
-  left: 30%;
-  top: 10%;
-}
-
-.engineer {
-  opacity: 0;
-  width: 200px;
-  position: absolute;
-  right: 20%;
-  top: 40%;
-}
-
-.engineer_board {
-  opacity: 0;
-  width: 800px;
-  position: absolute;
-  right: 25%;
-  top: 38%;
 }

@@ -1,0 +1,25 @@
+.section3 {
+  overflow: hidden;
+}
+
+.section3>.title {
+  display: block;
+  width: 1000px;
+  opacity: 0;
+  margin: 40px auto;
+}
+
+.section3>.ui-wrapper {
+  margin: 40px auto;
+  text-align: center;
+}
+
+.section3>.uiImage {
+  display: block;
+  opacity: 0;
+}
+
+.section3>.uiBoard {
+  display: block;
+  opacity: 0;
+}
