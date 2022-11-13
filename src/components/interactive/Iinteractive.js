@@ -35,7 +35,7 @@ const Interactive = () => {
         opacity: 1,
       })
       .fromTo("#uiDesigner .text-background-border", {
-        strokeDashoffset: 465,
+        strokeDashoffset: 466,
       }, {
         strokeDashoffset: 0,
       }, '<')
@@ -58,7 +58,7 @@ const Interactive = () => {
         strokeDashoffset: 0,
       })
       .fromTo("#link-line .line", {
-        strokeDashoffset: 405,
+        strokeDashoffset: 406,
       }, {
         strokeDashoffset: 0,
       })
@@ -74,7 +74,7 @@ const Interactive = () => {
         opacity: 1,
       })
       .fromTo("#developer .text-background-top-border", {
-        strokeDashoffset: 812,
+        strokeDashoffset: 813,
       }, {
         strokeDashoffset: 0,
       }, '<')

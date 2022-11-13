@@ -1,57 +1,12 @@
 import './BotherItem.css';
 
 function BotherItem() {
-    return <svg style={{ margin: 'auto', display: 'block' }} width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+    const windowWidth = window?.innerWidth || 1920;
+    const windowHeight = window?.innerHeight || 1000;
+    const svgWidth = 1200;
+    return <svg style={{ margin: 'auto 40', display: 'block' }} viewBox={`${windowWidth > svgWidth ? (windowWidth - svgWidth) / -2 : 0} 0 ${windowWidth > svgWidth ? windowWidth : svgWidth} ${windowHeight}`} fill="none" xmlns="http://www.w3.org/2000/svg">
         {/* BotherItem1 */}
         <svg id="BotherItem1" style={{ margin: 'auto', display: 'block' }} width="800" height="361" viewBox="0 0 800 361" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g id="square_one" filter="url(#filter0_d_40_121)" transform='translate(0,161)'>
-                <path
-                    style={{ strokeDasharray: 1010 }}
-                    d="m 121 12 l -107 63.5 l 229 62.5 l 94.5 -70 z"
-                    stroke="white"
-                    stroke-width="2.5"
-                    shape-rendering="crispEdges"
-                />
-            </g>
-
-            <defs>
-                <filter
-                    id="filter0_d_40_121"
-                    x="0.942871"
-                    y="0.692673"
-                    width="349.406"
-                    height="148.673"
-                    filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
-                >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                    <feColorMatrix
-                        in="SourceAlpha"
-                        type="matrix"
-                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                        result="hardAlpha"
-                    />
-                    <feOffset />
-                    <feGaussianBlur stdDeviation="5" />
-                    <feComposite in2="hardAlpha" operator="out" />
-                    <feColorMatrix
-                        type="matrix"
-                        values="0 0 0 0 0.996078 0 0 0 0 0.00392157 0 0 0 0 0.996078 0 0 0 1 0"
-                    />
-                    <feBlend
-                        mode="normal"
-                        in2="BackgroundImageFix"
-                        result="effect1_dropShadow_40_121"
-                    />
-                    <feBlend
-                        mode="normal"
-                        in="SourceGraphic"
-                        in2="effect1_dropShadow_40_121"
-                        result="shape"
-                    />
-                </filter>
-            </defs>
-
             <g id="bar_one" transform='translate(112,15)'>
                 <text style={{ opacity: 0 }} x="210" y="84" fill="white" fontSize={36}>羨慕別人的酷酷網頁動畫？</text>
                 <g filter="url(#filter0_d_40_60)">
@@ -146,24 +101,8 @@ function BotherItem() {
             </g>
         </svg >
         {/* BotherItem2 */}
-        <svg id="BotherItem2" style={{ margin: 'auto', display: 'block' }} width="1700" height="1350" viewBox="-400 -200 1700 1350" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g id="square_two" filter="url(#filter0_d_40_88)">
-                <path style={{ strokeDasharray: 1010 }} d="M13 116.5L140.5 12C182.167 21.5 266.7 40.8 271.5 42C276.3 43.2 190.833 115.167 147.5 151L13 116.5Z" stroke="white" stroke-width="2.5" shape-rendering="crispEdges" />
-            </g>
-            <defs>
-                <filter id="filter0_d_40_88" x="0.29892" y="0.645264" width="282.645" height="161.724" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                    <feOffset />
-                    <feGaussianBlur stdDeviation="5" />
-                    <feComposite in2="hardAlpha" operator="out" />
-                    <feColorMatrix type="matrix" values="0 0 0 0 0.996078 0 0 0 0 0.00392157 0 0 0 0 0.996078 0 0 0 1 0" />
-                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_40_88" />
-                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_40_88" result="shape" />
-                </filter>
-            </defs>
-
-            <g id="bar_two" transform='translate(12,115)'>
+        <svg id="BotherItem2" style={{ margin: 'auto', display: 'block' }} width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="bar_two" transform='translate(473,150)'>
                 <text style={{ opacity: 0 }} x="240" y="168" fill="white" fontSize={36}>滿足不了同事的許願？</text>
                 <path style={{ strokeDasharray: 1100 }} d="M1.140099999999947,0.9975000000000307L95.08009999999994,94.93750000000003L85.03999999999995,94.93750000000003L63.37009999999995,73.26750000000003L57.820099999999954,78.81750000000002L135.38999999999996,156.39800000000002L173.13999999999996,156.39800000000002L173.13999999999996,152.49800000000002L161.90999999999997,141.26800000000003L153.36999999999998,141.26800000000003L132.45999999999998,120.34800000000001L140.07999999999998,112.72800000000001L204,112.72800000000001L204,206.497L620.5,206.5m" stroke="#DEFE47" stroke-width="2.5" stroke-miterlimit="10" />
                 <path className='rect' style={{ opacity: 0 }} d="M233 119L635.5 119V150.34L617.83 168H606.83V180.67L594.66 192.84H233V119Z" fill="#DEFE47" fill-opacity="0.2" />
@@ -214,27 +153,11 @@ function BotherItem() {
             </g>
         </svg>
         {/* BotherItem3 */}
-        <svg id="BotherItem3" style={{ margin: 'auto', display: 'block' }} width="1700" height="1000" viewBox="-350 -470 1700 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g id="square_three" filter="url(#filter0_d_40_90)">
-                <path style={{ strokeDasharray: 1010 }} d="M13 64.5C32.3333 49 72.2 16.8 77 12L224.5 64.5L165.5 119.5L13 64.5Z" stroke="white" stroke-width="2.5" shape-rendering="crispEdges" />
-            </g>
-            <defs>
-                <filter id="filter0_d_40_90" x="0.4785" y="0.557373" width="236.378" height="130.377" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                    <feOffset />
-                    <feGaussianBlur stdDeviation="5" />
-                    <feComposite in2="hardAlpha" operator="out" />
-                    <feColorMatrix type="matrix" values="0 0 0 0 0.996078 0 0 0 0 0.00392157 0 0 0 0 0.996078 0 0 0 1 0" />
-                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_40_90" />
-                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_40_90" result="shape" />
-                </filter>
-            </defs>
-
-            <g id="bar_three" transform='translate(-385,58)'>
+        <svg id="BotherItem3" style={{ margin: 'auto', display: 'block' }} width="1200" height="800" viewBox="00  1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="bar_three" transform='translate(193,350)'>
                 <text style={{ opacity: 0 }} x="230" y="164" fill="white" fontSize={36}>動畫技能樹太雜無從下手？</text>
                 <g filter="url(#filter0_d_40_110)">
-                    <path style={{ strokeDasharray: 1221 }} d="M396.68,5.999999999999986L426.17900000000003,35.499999999999986L485.17900000000003,94.49999999999999L485.17900000000003,82.74999999999999L491.33900000000006,82.74999999999999L621.085,82.74999999999999L630.505,92.16999999999999L682.004,92.16999999999999L682.004,229L584.635,229L584.635,213.74L578.005,207.11L163.51,207.11L75.5,116.5L56.980000000000004,116.5L42.980000000000004,102.5L42.980000000000004,94L5.49,94m" stroke="#DEFE47" stroke-width="2.5" stroke-miterlimit="10" />
+                    <path style={{ strokeDasharray: 1221 }} d="M483,5.999999999999986L441,38.999999999999986L485.17900000000003,82.99999999999999L485.17900000000003,71.24999999999999L491.33900000000006,71.24999999999999L621.085,71.24999999999999L630.505,80.66999999999999L682.004,80.66999999999999L682.004,217.5L584.635,217.5L584.635,202.24L578.005,195.61L163.51,195.61L75.5,105L56.980000000000004,105L42.980000000000004,91L42.980000000000004,82.5L5.49,82.5m" stroke="#DEFE47" stroke-width="2.5" stroke-miterlimit="10" />
                 </g>
                 <path className='rect' style={{ opacity: 0 }} d="M136.798 117.417H126.618L115.112 106L64 106V106.855H111.538L119.479 114.726H98.815L108.387 124.223L117.612 133.376H131.687L153.061 154.575V158.422L190.934 196H216L136.798 117.417Z" fill="#DEFE47" />
                 <path className='rect' style={{ opacity: 0 }} d="M125 140L180.915 196H189L133.085 140H125Z" fill="#DEFE47" />

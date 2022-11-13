@@ -28,11 +28,6 @@ const Bother = () => {
       })
 
       // BotherItem1
-      .fromTo("#BotherItem1 #square_one path", {
-        strokeDashoffset: 1010,
-      }, {
-        strokeDashoffset: 0,
-      })
       .fromTo("#BotherItem1 #bar_one path", {
         strokeDashoffset: 1100,
       }, {
@@ -50,11 +45,6 @@ const Bother = () => {
       })
 
       // BotherItem2
-      .fromTo("#BotherItem2 #square_two path", {
-        strokeDashoffset: 1010,
-      }, {
-        strokeDashoffset: 0,
-      })
       .fromTo("#BotherItem2 #bar_two path", {
         strokeDashoffset: 1100,
       }, {
@@ -72,11 +62,6 @@ const Bother = () => {
       })
 
       // BotherItem3
-      .fromTo("#BotherItem3 #square_three path", {
-        strokeDashoffset: 1010,
-      }, {
-        strokeDashoffset: 0,
-      })
       .fromTo("#BotherItem3 #bar_three path", {
         strokeDashoffset: 1221,
       }, {

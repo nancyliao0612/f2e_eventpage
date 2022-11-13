@@ -4,7 +4,8 @@
 
 .section2>.title {
   display: block;
-  width: 500px;
+  width: 80%;
+  max-width: 500px;
   opacity: 0;
   margin: 40px auto;
 }

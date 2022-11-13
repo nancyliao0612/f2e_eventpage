@@ -1,5 +1,8 @@
 function InteractiveItem() {
-    return <svg id="interactive-svg-wrapper" width="1200" height="450" viewBox="0 0 1200 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+    const windowWidth = window?.innerWidth || 1920;
+    const windowHeight = window?.innerHeight || 1000;
+    const svgWidth = 1200;
+    return <svg id="interactive-svg-wrapper" viewBox={`${windowWidth > svgWidth ? (windowWidth - svgWidth) / -2 : 0} 0 ${windowWidth > svgWidth ? windowWidth : svgWidth} ${windowHeight}`} fill="none" xmlns="http://www.w3.org/2000/svg">
         {/* 人像 */}
         <svg id="uiImage" style={{ opacity: 0 }} width="211" height="211" viewBox="0 0 211 211" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
             <g filter="url(#filter0_d_91_1597)">
@@ -27,11 +30,11 @@ function InteractiveItem() {
             <svg id="uiDesigner" width="450" height="170" viewBox="0 0 450 170" fill="none" xmlns="http://www.w3.org/2000/svg">
                 {/* 上框 */}
                 <svg width="447" height="15" viewBox="0 0 447 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path style={{ strokeDasharray: 465 }} className="text-background-border" d="M2 12.5L12.5 3H139L148.5 12.5H410.5L420 3H435L444.5 12.5" stroke="white" stroke-width="5" />
+                    <path style={{ strokeDasharray: 466 }} className="text-background-border" d="M2 12.5L12.5 3H139L148.5 12.5H410.5L420 3H435L444.5 12.5" stroke="white" stroke-width="5" />
                 </svg>
                 {/* 下框 */}
                 <svg width="450" height="170" viewBox="0 -140 450 170" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path style={{ strokeDasharray: 465 }} className="text-background-border" d="M0.5 3.5H38.5L49.5 14.5H447V0" stroke="white" stroke-width="5" />
+                    <path style={{ strokeDasharray: 466 }} className="text-background-border" d="M0.5 3.5H38.5L49.5 14.5H447V0" stroke="white" stroke-width="5" />
                 </svg>
                 {/* 背景 */}
                 <svg width="447" height="152" viewBox="0 0 447 152" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -52,7 +55,7 @@ function InteractiveItem() {
 
                 {/* 連結線 */}
                 <svg width="225" height="253" viewBox="-33 -33 225 253" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path style={{ strokeDasharray: 405 }} className="line" d="M2 3L12.5 12.5H139L148.5 3H164.5L174 12.5H189V219.5" stroke="white" stroke-width="5" />
+                    <path style={{ strokeDasharray: 406 }} className="line" d="M2 3L12.5 12.5H139L148.5 3H164.5L174 12.5H189V219.5" stroke="white" stroke-width="5" />
                 </svg>
 
                 {/* 終點 */}
@@ -66,7 +69,7 @@ function InteractiveItem() {
             <svg id="developer" width="900" height="450" viewBox="0 0 900 450" fill="none" xmlns="http://www.w3.org/2000/svg">
                 {/* 上框 */}
                 <svg width="803" height="315" viewBox="0 -260 803 315" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path style={{ strokeDasharray: 812 }} className="text-background-top-border" d="M802.5 2.5H682L672.5 12H36L26.5 2.5H11.5L2 12" stroke="white" stroke-width="5" />
+                    <path style={{ strokeDasharray: 813 }} className="text-background-top-border" d="M802.5 2.5H682L672.5 12H36L26.5 2.5H11.5L2 12" stroke="white" stroke-width="5" />
                 </svg>
 
                 {/* 下框 */}
