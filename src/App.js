@@ -4,6 +4,7 @@ import F2E from "./components/f2e/F2E";
 import Bother from "./components/bother/Bother";
 import Rules from "./components/rules/Rules";
 import Interactive from "./components/interactive/Iinteractive";
+import Signup from "./components/signup/Signup";
 
 function App() {
   const backgroundRef = useRef();
@@ -14,6 +15,7 @@ function App() {
         <F2E />
         <Bother />
         <Interactive />
+        <Signup />
         <Rules />
       </div>
 

@@ -1,0 +1,63 @@
+.signup_container {
+  position: relative;
+  border: solid 2px green;
+}
+
+.line {
+  height: 100vh;
+}
+
+.signup_date {
+  position: absolute;
+  top: 20px;
+  left: 35px;
+  width: 850px;
+}
+
+.team_group {
+  position: absolute;
+  bottom: 5px;
+  left: 113px;
+  width: 680px;
+}
+
+.ui_group {
+  position: absolute;
+  bottom: 50px;
+  left: 122px;
+  width: 670px;
+}
+
+.engineer_group {
+  position: absolute;
+  bottom: 50px;
+  left: 122px;
+  width: 670px;
+}
+
+.tag {
+  position: absolute;
+  cursor: pointer;
+}
+
+.team_group_tag {
+  top: 270px;
+  left: 400px;
+  width: 120px;
+}
+
+.team_group_tag:hover {
+  fill: red;
+}
+
+.ui_group_tag {
+  top: 270px;
+  left: 540px;
+  width: 140px;
+}
+
+.engineer_group_tag {
+  top: 270px;
+  left: 700px;
+  width: 160px;
+}
