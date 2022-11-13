@@ -2,11 +2,8 @@ import { useEffect } from "react";
 import "./interactive.css";
 // gsap
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 // images
 import title from "./images/title.svg";
-import uiImage from "./images/ui.png";
-import uiBoard from "./images/ui_board.png";
 import InteractiveItem from "../../svg/InteractiveItem";
 
 const Interactive = () => {
@@ -32,18 +29,72 @@ const Interactive = () => {
       .to(".section3 > .title", {
         y: 0,
       })
-      .fromTo(".section3 .uiImage", {
-        opacity: 0,
-        y: 250,
-      }, {
-        opacity: 1,
-        y: 0,
-      }, '<')
-      .fromTo(".section3 .uiBoard", {
+      .fromTo("#interactive-svg-wrapper #uiImage", {
         opacity: 0,
       }, {
         opacity: 1,
+      })
+      .fromTo("#uiDesigner .text-background-border", {
+        strokeDashoffset: 465,
+      }, {
+        strokeDashoffset: 0,
       }, '<')
+      .fromTo("#uiDesigner .text-background", {
+        opacity: 0,
+      }, {
+        opacity: 1,
+      }, '<')
+      .fromTo("#uiDesigner .text", {
+        strokeDashoffset: 2950,
+        fill: 'none',
+      }, {
+        strokeDashoffset: 0,
+        fill: 'white',
+      })
+
+      .fromTo("#link-line .start", {
+        strokeDashoffset: 94,
+      }, {
+        strokeDashoffset: 0,
+      })
+      .fromTo("#link-line .line", {
+        strokeDashoffset: 405,
+      }, {
+        strokeDashoffset: 0,
+      })
+      .fromTo("#link-line .end", {
+        strokeDashoffset: 94,
+      }, {
+        strokeDashoffset: 0,
+      })
+
+      .fromTo("#interactive-svg-wrapper #developerImage", {
+        opacity: 0,
+      }, {
+        opacity: 1,
+      })
+      .fromTo("#developer .text-background-top-border", {
+        strokeDashoffset: 812,
+      }, {
+        strokeDashoffset: 0,
+      }, '<')
+      .fromTo("#developer .text-background-bottom-border", {
+        strokeDashoffset: 909,
+      }, {
+        strokeDashoffset: 0,
+      }, '<')
+      .fromTo("#developer .text-background", {
+        opacity: 0,
+      }, {
+        opacity: 1,
+      }, '<')
+      .fromTo("#developer .text", {
+        strokeDashoffset: 5155,
+        fill: 'none',
+      }, {
+        strokeDashoffset: 0,
+        fill: 'white',
+      })
       ;
 
     return () => {
@@ -55,11 +106,9 @@ const Interactive = () => {
     <section class="section3">
       <img src={title} alt="title" className="title" />
       <div className="ui-wrapper">
-        <img src={uiImage} alt="uiImage" className="uiImage" />
-        <img src={uiBoard} alt="uiBoard" className="uiBoard" />
+        <InteractiveItem />
       </div>
 
-      {/* <InteractiveItem /> */}
     </section>
   );
 };

@@ -12,7 +12,7 @@ function App() {
     <>
       <div ref={backgroundRef}>
         <F2E />
-        {/* <Bother /> */}
+        <Bother />
         <Interactive />
         <Rules />
       </div>
