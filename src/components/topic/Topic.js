@@ -16,40 +16,45 @@ const Topic = () => {
       },
     });
 
-    // srollTL
-    //   .fromTo(".section4 > .title", {
-    //     opacity: 0,
-    //     xPercent: 100,
-    //     y: 250,
-    //   }, {
-    //     opacity: 1,
-    //     xPercent: 0,
-    //   })
-    //   .to(".section4 > .title", {
-    //     y: 0,
-    //   })
-    //   .fromTo("#interactive-svg-wrapper #uiImage", {
-    //     opacity: 0,
-    //   }, {
-    //     opacity: 1,
-    //   })
-    //   .fromTo("#uiDesigner .text-background-border", {
-    //     strokeDashoffset: 465,
-    //   }, {
-    //     strokeDashoffset: 0,
-    //   }, '<')
-    //   .fromTo("#uiDesigner .text-background", {
-    //     opacity: 0,
-    //   }, {
-    //     opacity: 1,
-    //   }, '<')
-    //   .fromTo("#uiDesigner .text", {
-    //     strokeDashoffset: 2950,
-    //     fill: 'none',
-    //   }, {
-    //     strokeDashoffset: 0,
-    //     fill: 'white',
-    //   })
+    srollTL
+      .fromTo("#topic-svg-wrapper #title-grey", {
+        fill: 'none',
+      }, {
+        fill: 'white',
+      })
+      .fromTo("#topic-svg-wrapper .title-slash", {
+        fill: 'none',
+      }, {
+        fill: '#DEFE47',
+      })
+      .fromTo("#topic-svg-wrapper .title-text", {
+        strokeDashoffset: 6650,
+        fill: 'none',
+      }, {
+        strokeDashoffset: 0,
+        fill: '#DEFE47',
+      }, '<')
+      .fromTo("#topic-svg-wrapper .sub-title path", {
+        opacity: 0,
+      }, {
+        opacity: 1,
+      })
+      .fromTo("#topic-svg-wrapper .week1 path", {
+        opacity: 0,
+      }, {
+        opacity: 1,
+      })
+      .fromTo("#topic-svg-wrapper .week2 path", {
+        opacity: 0,
+      }, {
+        opacity: 1,
+      })
+      .fromTo("#topic-svg-wrapper .week3 path", {
+        opacity: 0,
+      }, {
+        opacity: 1,
+      })
+      ;
 
     return () => {
       srollTL.kill();
