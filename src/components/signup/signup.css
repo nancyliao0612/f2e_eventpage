@@ -1,6 +1,5 @@
 .signup_container {
   position: relative;
-  border: solid 2px green;
 }
 
 .line {
@@ -40,6 +39,20 @@
   cursor: pointer;
 }
 
+/* .try {
+  width: 200px;
+  height: 200px;
+  margin: 40px;
+  fill: white;
+  fill-opacity: 0.2;
+  border: solid 1px red;
+}
+
+.try:hover {
+  fill: white;
+  fill-opacity: 1;
+} */
+
 .team_group_tag {
   top: 270px;
   left: 400px;
@@ -47,7 +60,7 @@
 }
 
 .team_group_tag:hover {
-  fill: red;
+  fill: green;
 }
 
 .ui_group_tag {

@@ -1,5 +1,6 @@
 .rules_container {
   overflow: hidden;
+  z-index: 1;
 }
 
 .title_img_container {
@@ -17,7 +18,7 @@
   height: 100%;
   position: fixed;
   top: 0;
-  z-index: -1;
+  z-index: 0;
   background-image: url("./images/black_left.png");
   background-size: contain;
 }
@@ -28,7 +29,7 @@
   position: fixed;
   top: 0;
   right: 0;
-  z-index: -1;
+  z-index: 0;
   background-image: url("./images/black_left.png");
   background-size: cover;
 }

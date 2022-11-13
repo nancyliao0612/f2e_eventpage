@@ -15,7 +15,6 @@
   --color-bg: #fff;
   --color-bg-black: black;
   --color-primary: black;
-  --color-primary-variant: black;
   --color-white: #fff;
   --color-light: black;
 
@@ -35,7 +34,7 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Noto Sans TC", sans-serif;
   color: var(--color-white);
   line-height: 1.7;
 }

@@ -20,47 +20,10 @@ const Rules = () => {
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
-    gsap.fromTo(
-      ".black_left",
-      {
-        opacity: 0,
-        x: -1500,
-      },
-      {
-        opacity: 1,
-        x: 0,
-        ease: "power3.easeInOut",
-        duration: 0.5,
-        scrollTrigger: {
-          trigger: ".rules_container",
-          start: "top top",
-          toggleActions: "restart none none reverse", // 當滑鼠往上滑動時，reverse 讓門可以反向打開
-          markers: true,
-        },
-      }
-    );
-    gsap.fromTo(
-      ".black_right",
-      {
-        opacity: 0,
-        x: 1500,
-      },
-      {
-        opacity: 1,
-        x: 0,
-        ease: "power3.easeInOut",
-        duration: 0.5,
-        scrollTrigger: {
-          trigger: ".rules_container",
-          start: "top top",
-          toggleActions: "restart none none reverse",
-        },
-      }
-    );
-
     const scrollTL = gsap.timeline({
       scrollTrigger: {
         trigger: ".rules_container",
+        start: "top top",
         pin: true,
         markers: true,
         scrub: true,

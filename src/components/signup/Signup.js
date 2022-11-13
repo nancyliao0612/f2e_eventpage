@@ -12,6 +12,8 @@ import ui_group from "./images/ui_group.svg";
 import ui_group_tag from "./images/ui_group_tag.svg";
 import engineer_group from "./images/engineer_group.svg";
 import engineer_group_tag from "./images/engineer_group_tag.svg";
+import { ReactComponent as TeamGroupTag } from "./images/team_group_tag.svg";
+
 // gsap
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -68,6 +70,42 @@ const Signup = () => {
           opacity: 1,
           duration: 2,
         }
+      )
+      // 關門特效
+      .fromTo(
+        ".black_left",
+        {
+          opacity: 0,
+          x: -1500,
+        },
+        {
+          opacity: 1,
+          x: 0,
+          ease: "power3.easeInOut",
+          duration: 0.5,
+          scrollTrigger: {
+            trigger: ".signup_container",
+            toggleActions: "restart none none reverse", // 當滑鼠往上滑動時，reverse 讓門可以反向打開
+            markers: true,
+          },
+        }
+      )
+      .fromTo(
+        ".black_right",
+        {
+          opacity: 0,
+          x: 1500,
+        },
+        {
+          opacity: 1,
+          x: 0,
+          ease: "power3.easeInOut",
+          duration: 0.5,
+          scrollTrigger: {
+            trigger: ".signup_container",
+            toggleActions: "restart none none reverse",
+          },
+        }
       );
 
     return () => {
@@ -83,6 +121,8 @@ const Signup = () => {
       <img src={signup_date} alt="signup date" className="signup_date signup" />
 
       {/* 組別 */}
+      {/* <Try className="try" /> */}
+      {/* <TeamGroupTag className="try" /> */}
       <img
         src={team_group_tag}
         alt="team group tag"
