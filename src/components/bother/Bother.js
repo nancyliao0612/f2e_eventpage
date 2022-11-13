@@ -77,39 +77,6 @@ const Bother = () => {
       }, {
         opacity: 1,
       })
-
-      // transition
-      .fromTo("#BotherItem1 path, #BotherItem1 rect, #BotherItem1 line, #BotherItem1 text", {
-        x: 0,
-        opacity: 1,
-      }, {
-        x: -800,
-        animation: 'unset',
-        opacity: 0,
-      })
-      .fromTo("#BotherItem3 path, #BotherItem3 rect, #BotherItem3 line, #BotherItem3 text", {
-        x: 0,
-        opacity: 1,
-      }, {
-        x: -700,
-        animation: 'unset',
-        opacity: 0,
-      }, '<')
-      .fromTo(".section2 > .title", {
-        x: 0,
-        opacity: 1,
-      }, {
-        x: 1000,
-        opacity: 0,
-      })
-      .fromTo("#BotherItem2 path, #BotherItem2 rect, #BotherItem2 line, #BotherItem2 text", {
-        x: 0,
-        opacity: 1,
-      }, {
-        x: 800,
-        animation: 'unset',
-        opacity: 0,
-      }, '<')
       ;
 
     return () => {
