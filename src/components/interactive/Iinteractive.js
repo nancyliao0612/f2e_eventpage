@@ -9,12 +9,19 @@ import InteractiveItem from "../../svg/InteractiveItem";
 const Interactive = () => {
 
   useEffect(() => {
+    const scrollSetting = {
+      trigger: ".section3",
+      pin: true,
+      scrub: 1,
+    };
+    const outerWidth = window.outerWidth || 1920;
+    if (outerWidth < 800) {
+      scrollSetting.start = "bottom-=770px center";
+      scrollSetting.end = "bottom center";
+    }
+
     const srollTL = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".section3",
-        pin: true,
-        scrub: 1,
-      },
+      scrollTrigger: scrollSetting,
     });
 
     srollTL

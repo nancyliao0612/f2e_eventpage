@@ -2,19 +2,25 @@ import { useEffect } from "react";
 import "./bother.css";
 // gsap
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 // images
 import title from "./images/title.png";
 import BotherItem from "../../svg/BotherItem.js";
 
 const Bother = () => {
   useEffect(() => {
+    const scrollSetting = {
+      trigger: ".section2",
+      pin: true,
+      scrub: 1,
+    };
+    const outerWidth = window.outerWidth || 1920;
+    if (outerWidth < 800) {
+      scrollSetting.start = "bottom-=770px center";
+      scrollSetting.end = "bottom center";
+    }
+
     const srollTL = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".section2",
-        pin: true,
-        scrub: 1,
-      },
+      scrollTrigger: scrollSetting,
     });
 
     srollTL

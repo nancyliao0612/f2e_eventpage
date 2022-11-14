@@ -1,8 +1,8 @@
 import './BotherItem.css';
 
 function BotherItem() {
-    const windowWidth = window?.innerWidth || 1920;
-    const windowHeight = window?.innerHeight || 1000;
+    const windowWidth = window?.outerWidth || 1920;
+    const windowHeight = window?.outerHeight || 1000;
     const svgWidth = 1200;
     return <svg style={{ margin: 'auto 40', display: 'block' }} viewBox={`${windowWidth > svgWidth ? (windowWidth - svgWidth) / -2 : 0} 0 ${windowWidth > svgWidth ? windowWidth : svgWidth} ${windowHeight}`} fill="none" xmlns="http://www.w3.org/2000/svg">
         {/* BotherItem1 */}
@@ -153,7 +153,7 @@ function BotherItem() {
             </g>
         </svg>
         {/* BotherItem3 */}
-        <svg id="BotherItem3" style={{ margin: 'auto', display: 'block' }} width="1200" height="800" viewBox="00  1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg id="BotherItem3" style={{ margin: 'auto', display: 'block' }} width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="bar_three" transform='translate(193,350)'>
                 <text style={{ opacity: 0 }} x="230" y="164" fill="white" fontSize={36}>動畫技能樹太雜無從下手？</text>
                 <g filter="url(#filter0_d_40_110)">

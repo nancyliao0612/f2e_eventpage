@@ -1,6 +1,6 @@
 function InteractiveItem() {
-    const windowWidth = window?.innerWidth || 1920;
-    const windowHeight = window?.innerHeight || 1000;
+    const windowWidth = window?.outerWidth || 1920;
+    const windowHeight = window?.outerHeight || 1000;
     const svgWidth = 1200;
     return <svg id="interactive-svg-wrapper" viewBox={`${windowWidth > svgWidth ? (windowWidth - svgWidth) / -2 : 0} 0 ${windowWidth > svgWidth ? windowWidth : svgWidth} ${windowHeight}`} fill="none" xmlns="http://www.w3.org/2000/svg">
         {/* 人像 */}

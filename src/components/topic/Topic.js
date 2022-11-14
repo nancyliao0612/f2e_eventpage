@@ -8,12 +8,19 @@ import TopicItem from "../../svg/TopicItem";
 const Topic = () => {
 
   useEffect(() => {
+    const scrollSetting = {
+      trigger: ".section4",
+      pin: true,
+      scrub: 1,
+    };
+    const outerWidth = window.outerWidth || 1920;
+    if (outerWidth < 800) {
+      scrollSetting.start = "bottom-=870px center";
+      scrollSetting.end = "bottom center";
+    }
+
     const srollTL = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".section4",
-        pin: true,
-        scrub: 1,
-      },
+      scrollTrigger: scrollSetting,
     });
 
     srollTL
