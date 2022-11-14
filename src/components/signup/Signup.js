@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 // css
 import "./signup.css";
 // images
@@ -7,20 +7,18 @@ import line_two from "./images/line_two.svg";
 import line_three from "./images/line_three.svg";
 import signup_date from "./images/signup_date.svg";
 import team_group from "./images/team_group.svg";
-import team_group_tag from "./images/team_group_tag.svg";
 import ui_group from "./images/ui_group.svg";
-import ui_group_tag from "./images/ui_group_tag.svg";
 import engineer_group from "./images/engineer_group.svg";
-import engineer_group_tag from "./images/engineer_group_tag.svg";
-import { ReactComponent as TeamGroupTag } from "./images/team_group_tag.svg";
+// import { ReactComponent as TeamGroupTag } from "./images/Union.svg";
+import teamGroupTag from "./images/teamgroup_tag_focus.png";
+import uiGroupTag from "./images/uigroup_focus_tag.svg";
+import engineerGroupTag from "./images/engineer_focus_tag.svg";
 
 // gsap
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Signup = () => {
-  const [value, setValue] = useState("");
-
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
@@ -28,7 +26,6 @@ const Signup = () => {
       scrollTrigger: {
         trigger: ".signup_container",
         pin: true,
-        markers: true,
         scrub: true,
       },
     });
@@ -37,38 +34,98 @@ const Signup = () => {
       .fromTo(
         ".line_one",
         {
-          x: -370,
+          xPercent: -100,
         },
         {
-          x: 285,
+          xPercent: 149,
+          duration: 100,
         }
       )
       .fromTo(
         ".line_two",
         {
-          x: -420,
+          xPercent: -500,
         },
         {
-          x: -25,
+          xPercent: 0,
+          duration: 100,
         }
       )
       .fromTo(
         ".line_three",
         {
-          x: -630,
+          xPercent: -800,
         },
         {
-          x: -400,
+          xPercent: -188,
+          duration: 100,
         }
       )
       .fromTo(
-        ".signup",
+        ".signup_date",
         {
           opacity: 0,
         },
         {
           opacity: 1,
-          duration: 2,
+          delay: 50,
+          duration: 200,
+        }
+      )
+
+      .fromTo(
+        ".team",
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          delay: 50,
+          duration: 500,
+        }
+      )
+      .fromTo(
+        ".team",
+        {
+          opacity: 1,
+        },
+        {
+          opacity: 0,
+          delay: 50,
+          duration: 200,
+        }
+      )
+      .fromTo(
+        ".ui_next",
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          delay: 50,
+          duration: 500,
+        }
+      )
+      .fromTo(
+        ".ui",
+        {
+          opacity: 1,
+        },
+        {
+          opacity: 0,
+          delay: 50,
+          duration: 200,
+        }
+      )
+      .fromTo(
+        ".engineer_next",
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          delay: 50,
+          duration: 500,
         }
       )
       // 關門特效
@@ -82,11 +139,11 @@ const Signup = () => {
           opacity: 1,
           x: 0,
           ease: "power3.easeInOut",
-          duration: 0.5,
+          delay: 500,
+          duration: 500,
           scrollTrigger: {
             trigger: ".signup_container",
             toggleActions: "restart none none reverse", // 當滑鼠往上滑動時，reverse 讓門可以反向打開
-            markers: true,
           },
         }
       )
@@ -100,7 +157,8 @@ const Signup = () => {
           opacity: 1,
           x: 0,
           ease: "power3.easeInOut",
-          duration: 0.5,
+          delay: 500,
+          duration: 500,
           scrollTrigger: {
             trigger: ".signup_container",
             toggleActions: "restart none none reverse",
@@ -118,48 +176,33 @@ const Signup = () => {
       <img src={line_one} alt="line" className="line_one line" />
       <img src={line_two} alt="line" className="line_two line" />
       <img src={line_three} alt="line" className="line_three line" />
-      <img src={signup_date} alt="signup date" className="signup_date signup" />
+      <img src={signup_date} alt="signup date" className="signup_date " />
 
       {/* 組別 */}
-      {/* <Try className="try" /> */}
-      {/* <TeamGroupTag className="try" /> */}
       <img
-        src={team_group_tag}
+        src={teamGroupTag}
         alt="team group tag"
-        className="team_group_tag tag signup"
-        onClick={() => setValue("team")}
+        className="team_group_tag tag team"
       />
       <img
-        src={ui_group_tag}
-        alt="ui group tag"
-        className="ui_group_tag tag signup"
-        onClick={() => setValue("ui")}
+        src={uiGroupTag}
+        alt="ui team group tag"
+        className="ui_group_tag tag ui ui_next"
       />
       <img
-        src={engineer_group_tag}
-        alt="engineer group tag"
-        className="engineer_group_tag tag signup"
-        onClick={() => setValue("engineer")}
+        src={engineerGroupTag}
+        alt="engineer team group tag"
+        className="engineer_group_tag tag engineer_next"
       />
 
       {/* 組別資訊 */}
-      {value === "team" && (
-        <img
-          src={team_group}
-          alt="team group"
-          className="team_group timeline"
-        />
-      )}
-      {value === "ui" && (
-        <img src={ui_group} alt="ui group" className="ui_group timeline" />
-      )}
-      {value === "engineer" && (
-        <img
-          src={engineer_group}
-          alt="engineer group"
-          className="engineer_group timeline"
-        />
-      )}
+      <img src={team_group} alt="team group" className="team_group team" />
+      <img src={ui_group} alt="ui group" className="ui_group ui ui_next" />
+      <img
+        src={engineer_group}
+        alt="engineer group"
+        className="engineer_group engineer_next"
+      />
     </section>
   );
 };

@@ -25,7 +25,6 @@ const Rules = () => {
         trigger: ".rules_container",
         start: "top top",
         pin: true,
-        markers: true,
         scrub: true,
       },
     });
